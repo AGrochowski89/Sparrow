@@ -21,16 +21,26 @@ public class User {
     private Date dateOfRegistration;
     @Column(name = "password")
     private String password;
+    @Column(name = "login")
+    private String login;
 
     public User() {
     }
 
-    public User(String name, String lastName, String email, Date dateOfRegistration, String password) {
+    public User(String name, String lastName, String email, Date dateOfRegistration, String password, String login) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.dateOfRegistration = dateOfRegistration;
         this.password = password;
+        this.login = login;
+    }
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public long getId() {
